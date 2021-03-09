@@ -7,8 +7,12 @@ const checkForm = (e) => {
        console.log(`${element.id} -->${element.value}`)
        if (!element.value) {
            validated = false;
-           emptyfields[element.id] = true
-        } else {emptyfields[element.id] = false}
+           emptyfields[element.id] = true;
+           element.classList.add("bg-danger");
+        } else {
+            emptyfields[element.id] = false;
+            element.classList.remove("bg-danger");
+        }
         console.log(emptyfields[element.id])
    });
    console.log(`Am I validated? ${validated}`);
