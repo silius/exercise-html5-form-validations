@@ -13,7 +13,7 @@ const checkForm = (e) => {
             emptyfields[element.id] = false;
             element.classList.remove("bg-danger");
         }
-        console.log(emptyfields[element.id])
+        console.log(`este campo es vacio: ${emptyfields[element.id]}`)
    });
    console.log(`Am I validated? ${validated}`);
 }
