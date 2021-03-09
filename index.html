@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <title>Practice makes perfect🏋️</title>
+</head>
+<body><br>
+  <div class="container border rounded">
+    <div class="row border-bottom bg-light">
+      <div class="col align-self-center">
+        <h4><p></p>Payment form example</h4><p></p>
+      </div>
+    </div>
+    <div id="alert_fm" class="row invisible"><br>
+      <div class="col alert alert-danger" role="alert">Some fields are missing</div>
+    </div>
+   <form action="done.html">
+     <div class="row">
+        <div class="col-4 form-group">
+          <label for="inputCard">Card #</label>
+          <input type="tel" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" class="form-control" id="inputCard">
+        </div>
+        <div class="col-3 form-group">
+          <label for="inputCVC">CVC #</label>
+          <input type="tel" type="tel" inputmode="numeric" pattern="[0-9\s]{3,4}" autocomplete="cc-cvc" maxlength="4" placeholder="0000" class="form-control" id="inputCVC">
+        </div>
+        <div class="col form-group">
+          <label for="inputamount">Amount</label>
+          $<input type="tel" type="tel" inputmode="numeric" pattern="[0-9\s]{2,10}" maxlength="7" placeholder="Amount" class="form-control" id="inputamount">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="inputfname">First Name</label>
+          <input type="text" class="form-control" id="inputfname" placeholder="">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLname">Last Name</label>
+          <input type="text" class="form-control" id="inputLname" placeholder="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" placeholder="">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputState">State</label>
+          <select id="inputState" class="form-control">
+            <option selected>Pick a state</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputZip">Postal Code</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <label for="">We accept:</label>
+          <div class="d-flex bg-secondary border rounded justify-content-center py-2">
+            <div class="form-check form-check-inline ">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked">
+              <label class="form-check-label" for="inlineRadio1"><i class="fab fa-cc-mastercard"></i></label>
+            </div>
+            <div class="form-check form-check-inline px-1">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2"><i class="fab fa-cc-visa"></i></label>
+            </div>
+            <div class="form-check form-check-inline px-1">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+              <label class="form-check-label" for="inlineRadio3"><i class="fab fa-cc-diners-club"></i></label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+              <label class="form-check-label" for="inlineRadio3"><i class="fab fa-cc-amex"></i></label>
+            </div>
+          </div>
+        </div>
+        <div class="col-3"></div>
+        <div class="form-group col align-self-end">
+          <label for="inputMessage">Message</label>
+          <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+         <small class="text-secondary">Add any notes here.</small>
+        </div>
+      </div>
+      <div class="row border-top bg-light py-2 d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary mx-1">Cancel</button>
+        <button type="submit" class="btn btn-primary ml-1 mr-2" id="send">Send</button>
+      </div>
+   </form>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="logic.js"></script>
+</body>
+</html>
